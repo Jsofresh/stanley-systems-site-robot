@@ -14,9 +14,9 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Insights", href: "#insights" },
+    { name: "How", href: "#how" },
+    { name: "Results", href: "#results" },
+    { name: "Case Study", href: "#case-study" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -29,7 +29,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
       <Dialog.Trigger asChild>
         <button
           className={cn(
-            "group lg:hidden p-2 text-foreground transition-colors",
+            "group p-2 text-foreground transition-colors lg:hidden",
             className
           )}
           aria-label="Open menu"
@@ -42,7 +42,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
       <Dialog.Portal>
         <div
           data-overlay="true"
-          className="fixed z-30 inset-0 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm"
         />
 
         <Dialog.Content
@@ -54,17 +54,17 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
               e.preventDefault();
             }
           }}
-          className="fixed top-0 left-0 w-full z-40 py-28 md:py-40"
+          className="fixed left-0 top-0 z-40 w-full py-28 md:py-36"
         >
           <Dialog.Title className="sr-only">Menu</Dialog.Title>
 
-          <nav className="flex flex-col space-y-6 container mx-auto">
+          <nav className="container mx-auto flex flex-col space-y-6">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={handleLinkClick}
-                className="text-xl font-mono uppercase text-foreground/60 transition-colors ease-out duration-150 hover:text-foreground/100 py-2"
+                className="py-2 font-mono text-xl uppercase text-foreground/60 transition-colors duration-150 ease-out hover:text-foreground"
               >
                 {item.name}
               </Link>
@@ -72,11 +72,11 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
 
             <div className="mt-6">
               <Link
-                href="/#sign-in"
+                href="#contact"
                 onClick={handleLinkClick}
-                className="inline-block text-xl font-mono uppercase text-primary transition-colors ease-out duration-150 hover:text-primary/80 py-2"
+                className="inline-block py-2 font-mono text-xl uppercase text-primary transition-colors duration-150 ease-out hover:text-primary/80"
               >
-                Sign In
+                Audit Call
               </Link>
             </div>
           </nav>

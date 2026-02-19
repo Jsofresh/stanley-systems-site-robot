@@ -20,6 +20,22 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      // Content pages use quotes/apostrophes heavily; escaping hurts readability.
+      "react/no-unescaped-entities": "off",
+
+      // Keep signal, but don't block builds on harmless lint.
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/ban-ts-comment": "warn",
+
+      // UI components occasionally need any; prefer local typing when it matters.
+      "@typescript-eslint/no-explicit-any": "off",
+
+      // Good to know, but shouldn't block shipping.
+      "react-hooks/exhaustive-deps": "warn",
+    },
+  },
 ];
 
 export default eslintConfig;

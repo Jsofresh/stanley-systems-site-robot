@@ -8,40 +8,45 @@ import { useState } from "react";
 
 export function Hero() {
   const [hovering, setHovering] = useState(false);
+
   return (
-    <div className="flex flex-col h-svh justify-between">
+    <section className="relative flex h-svh flex-col justify-between">
       <GL hovering={hovering} />
 
-      <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">BETA RELEASE</Pill>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
-          Unlock your <br />
-          <i className="font-light">future</i> growth
+      <div className="relative z-10 mt-auto pb-20 text-center">
+        <Pill className="mb-6">WORKFLOW AUTOMATION PARTNER</Pill>
+
+        <h1 className="font-sentient text-5xl sm:text-6xl md:text-7xl">
+          Remove manual ops <br />
+          <i className="font-light">without replacing your stack</i>
         </h1>
-        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[440px] mx-auto">
-          Through perpetual investment strategies that outperform the market
+
+        <p className="mx-auto mt-8 max-w-[620px] text-balance font-mono text-sm text-foreground/70 sm:text-base">
+          Stanley Systems helps service businesses eliminate repetitive re-entry, reduce exception chaos, and speed up
+          billing with measurable outcomes.
         </p>
 
-        <Link className="contents max-sm:hidden" href="/#contact">
+        <Link className="contents max-sm:hidden" href="#contact">
           <Button
             className="mt-14"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            [Contact Us]
+            [Book Workflow Audit]
           </Button>
         </Link>
-        <Link className="contents sm:hidden" href="/#contact">
+
+        <Link className="contents sm:hidden" href="#contact">
           <Button
             size="sm"
             className="mt-14"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            [Contact Us]
+            [Book Workflow Audit]
           </Button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
