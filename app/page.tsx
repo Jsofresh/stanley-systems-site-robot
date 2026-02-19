@@ -43,10 +43,10 @@ export default function HomePage() {
               {/* Left content */}
               <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text">
-                  Workflow Systems for Marine Dealers & Boat Shops
+                  AI-Powered Workflow Systems for Growing Businesses
                 </h1>
                 <p className="mt-4 text-neutral-300 max-w-lg">
-                  Automate service scheduling, customer communication, and invoicing across multiple locations. Reduce the chaos of managing repairs, storage, launches, and parts — without hiring more office staff.
+                  We handle the backend operations — scheduling, communication, invoicing, data entry — so your team can focus on what actually makes you money. AI integration that works while you sleep.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -94,23 +94,23 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Still drowning in service tickets?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Stop letting backend ops drain your resources?</h2>
               <div className="space-y-4 text-gray-300">
                 <p className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  Phone ringing off the hook with service requests, storage inquiries, and launch scheduling
+                  Time spent on repetitive tasks that don't generate revenue
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  Manual coordination between multiple locations (service bay, storage yard, launch ramp)
+                  Missed follow-ups and slow responses killing your conversion
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  Customers asking "Where's my boat?" every spring — no real-time updates
+                  Manual data entry across multiple tools and spreadsheets
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  Inventory & parts management falling through the cracks
+                  Team bandwidth maxed out on operational overhead
                 </p>
               </div>
             </div>
@@ -144,28 +144,28 @@ export default function HomePage() {
       <section id="services" className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Marine Operations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Operations That Scale</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              AI systems designed for boat dealers, service centers, and multi-location marine businesses
+              AI automation designed for service businesses, dealers, and multi-location operations
             </p>
           </div>
 
           <BentoGrid className="lg:grid-rows-3">
             <BentoCard
-              name="Service Desk Automation"
+              name="AI Service Desk"
               className="lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3"
               background={<div className="absolute inset-0 bg-black/80 backdrop-blur-sm border border-white/10" />}
               Icon={Bot}
-              description="AI that handles service calls, storage reservations, launch scheduling, and parts inquiries — 24/7, even when you're on the water."
+              description="Intelligent AI that handles customer inquiries, quotes, scheduling, and follow-ups — 24/7, so you never miss a lead."
               href="#"
               cta="Learn more"
             />
             <BentoCard
-              name="Multi-Location Coordination"
+              name="Workflow Automation"
               className="lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3"
               background={<div className="absolute inset-0 bg-black/80 backdrop-blur-sm border border-white/10" />}
               Icon={Workflow}
-              description="Sync service bays, storage yards, and launch schedules across your locations. No more double-booking or lost tickets."
+              description="Automate repetitive tasks, data entry, and handoffs across your tools. Your team focuses on revenue, not busywork."
               href="#"
               cta="Learn more"
             />
